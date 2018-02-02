@@ -4,8 +4,9 @@ Simple explanation of how mysql database works
 ##########################
 # Learn to install mysql #
 ##########################
-
+```
 yum install mysql-server
+```
 
 ##################
 # Login to mysql #
