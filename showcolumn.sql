@@ -4,6 +4,6 @@
 
 # The below statement shows the column information on two tables mytest and ssn
 
-show columns from mytest;
+SHOW COLUMNS FROM mytest;
 
-show columns from ssn;
+SHOW COLUMNS FROM ssn;
