@@ -126,6 +126,8 @@ Rows matched: 1  Changed: 1  Warnings: 0
 ```
 
 ### Joins ###
+
+#### Inner Join ####
 ```mysql
 mysql> SELECT * FROM mytest INNER JOIN ssn ON mytest.roll_no = ssn.roll_no;
 +---------+------------+--------------+---------+--------+---------+
@@ -138,6 +140,7 @@ mysql> SELECT * FROM mytest INNER JOIN ssn ON mytest.roll_no = ssn.roll_no;
 +---------+------------+--------------+---------+--------+---------+
 ```
 
+#### Left Join ####
 ```mysql
 mysql> SELECT * FROM mytest LEFT JOIN ssn ON mytest.roll_no = ssn.roll_no;
 +---------+------------+--------------+---------+--------+---------+
@@ -151,6 +154,7 @@ mysql> SELECT * FROM mytest LEFT JOIN ssn ON mytest.roll_no = ssn.roll_no;
 +---------+------------+--------------+---------+--------+---------+
 ```
 
+#### Right Join ####
 ```mysql
 mysql> SELECT * FROM mytest RIGHT JOIN ssn ON mytest.roll_no = ssn.roll_no;
 +---------+------------+--------------+---------+--------+---------+
