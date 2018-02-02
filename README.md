@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS mytest (
 
 ### Display column information of  a table ###
 ```mysql
-mysql> show columns from ssn;
+mysql> SHOW COLUMNS FROM ssn;
 +---------+------------+------+-----+---------+-------+
 | Field   | Type       | Null | Key | Default | Extra |
 +---------+------------+------+-----+---------+-------+
@@ -47,7 +47,7 @@ mysql> show columns from ssn;
 ````
 
 ```mysql
-mysql> show columns from mytest;
+mysql> SHOW COLUMNS FROM mytest;
 +------------+-------------+------+-----+---------+----------------+
 | Field      | Type        | Null | Key | Default | Extra          |
 +------------+-------------+------+-----+---------+----------------+
