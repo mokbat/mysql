@@ -8,27 +8,25 @@ Simple explanation of how mysql database works
 yum install mysql-server
 ```
 
-##################
+
 # Login to mysql #
-##################
-
+```
 mysql -u root -p
+```
 
-###############
 # Create a db #
-###############
-
+```
 CREATE DATABASE test;
+```
 
-###############
 # Use this db #
-###############
-
+```
 USE test;
+```
 
-##################
+
 # Create a table #
-##################
+```mysql
 
 CREATE TABLE IF NOT EXISTS mytest (
     test_id int(5) NOT NULL AUTO_INCREMENT,
@@ -37,7 +35,7 @@ CREATE TABLE IF NOT EXISTS mytest (
     roll_no varchar(5) NOT NULL,
     PRIMARY KEY(test_id)
     );
-
+```
 
 ############################
 # Insert Values in a table #
