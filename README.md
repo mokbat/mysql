@@ -1,25 +1,24 @@
-# mysql
+* MySQL *
 Simple explanation of how mysql database works
 
 
-# Learn to install mysql #
-
+* Learn to install mysql *
 ```
 yum install mysql-server
 ```
 
 
-# Login to mysql #
+* Login to mysql *
 ```
 mysql -u root -p
 ```
 
-# Create a db #
+* Create a db *
 ```
 CREATE DATABASE test;
 ```
 
-# Use this db #
+* Use this db *
 ```
 USE test;
 ```
