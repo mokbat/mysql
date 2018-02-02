@@ -2,29 +2,28 @@
 Simple explanation of how mysql database works
 
 
-## Learn to install mysql ##
+### Learn to install mysql ###
 ```
 yum install mysql-server
 ```
 
-
-* Login to mysql *
+### Login to mysql ###
 ```
 mysql -u root -p
 ```
 
-* Create a db *
+### Create a db ###
 ```
 CREATE DATABASE test;
 ```
 
-* Use this db *
+### Use this db ###
 ```
 USE test;
 ```
 
 
-# Create a table #
+### Create a table ###
 ```mysql
 
 CREATE TABLE IF NOT EXISTS mytest (
@@ -37,7 +36,7 @@ CREATE TABLE IF NOT EXISTS mytest (
 ```
 
 
-# Insert Values in a table #
+### Insert Values in a table ###
 ```
 INSERT INTO mytest (test_id, first_name, last_name, roll_no) VALUES ('1', 'joanne', 'allenntownne', 'A');
 INSERT INTO mytest (test_id, first_name, last_name, roll_no) VALUES ('2', 'illeana', 'dcruz', 'B');
@@ -46,7 +45,7 @@ INSERT INTO mytest (test_id, first_name, last_name, roll_no) VALUES ('4', 'sara'
 INSERT INTO mytest (test_id, first_name, last_name, roll_no) VALUES ('5', 'sara', 'winston', 'CE');
 ```
 
-# Create a table #
+### Create a table ###
 ```mysql
 CREATE TABLE IF NOT EXISTS ssn (
     ssn_no varchar(9) DEFAULT NULL,
@@ -55,7 +54,7 @@ CREATE TABLE IF NOT EXISTS ssn (
     );
 ```
 
-# Insert Values in a table #
+### Insert Values in a table ###
 ```mysql
 INSERT INTO ssn (ssn_no, roll_no) VALUES ('AAA', 'A');
 INSERT INTO ssn (ssn_no, roll_no) VALUES ('BBB', 'B');
@@ -63,7 +62,7 @@ INSERT INTO ssn (ssn_no, roll_no) VALUES ('CCC', 'C');
 INSERT INTO ssn (ssn_no, roll_no) VALUES ('DDD', 'D');
 ```
 
-# Display #
+### Display ###
 ```mysql
 mysql> SELECT * FROM mytest;
 +---------+------------+--------------+---------+
@@ -90,7 +89,7 @@ mysql> SELECT * FROM ssn;
 ```
 
 
-# Order By (default is ASC) #
+### Order By (default is ASC) ###
 ```mysql
 mysql> SELECT * FROM mytest ORDER BY roll_no;
 +---------+------------+--------------+---------+
@@ -105,7 +104,7 @@ mysql> SELECT * FROM mytest ORDER BY roll_no;
 ```
 
 
-# Group By #
+### Group By ###
 ```mysql
 mysql> SELECT * FROM mytest GROUP BY roll_no;
 +---------+------------+--------------+---------+
@@ -119,14 +118,14 @@ mysql> SELECT * FROM mytest GROUP BY roll_no;
 ```
 
 
-# Update #
+### Update ###
 ```mysql
 mysql> UPDATE mytest SET first_name='williaam', last_name='jonathan' WHERE roll_no='B';
 Query OK, 1 row affected (0.00 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
 ```
 
-# Joins #
+### Joins ###
 ```mysql
 mysql> SELECT * FROM mytest INNER JOIN ssn ON mytest.roll_no = ssn.roll_no;
 +---------+------------+--------------+---------+--------+---------+
