@@ -78,7 +78,7 @@ mysql> SELECT * FROM mytest;
 +---------+------------+--------------+---------+
 ```
 
-
+```mysql
 mysql> SELECT * FROM ssn;
 +--------+---------+
 | ssn_no | roll_no |
@@ -88,11 +88,11 @@ mysql> SELECT * FROM ssn;
 | CCC    | C       |
 | DDD    | D       |
 +--------+---------+
+```
 
-#############################
+
 # Order By (default is ASC) #
-#############################
-
+```mysql
 mysql> SELECT * FROM mytest ORDER BY roll_no;
 +---------+------------+--------------+---------+
 | test_id | first_name | last_name    | roll_no |
@@ -103,11 +103,11 @@ mysql> SELECT * FROM mytest ORDER BY roll_no;
 |       4 | sara       | winston      | C       |
 |       5 | sara       | winston      | CE      |
 +---------+------------+--------------+---------+
+```
 
-############
+
 # Group By #
-############
-
+```mysql
 mysql> SELECT * FROM mytest GROUP BY roll_no;
 +---------+------------+--------------+---------+
 | test_id | first_name | last_name    | roll_no |
@@ -117,19 +117,18 @@ mysql> SELECT * FROM mytest GROUP BY roll_no;
 |       3 | sara       | winston      | C       |
 |       5 | sara       | winston      | CE      |
 +---------+------------+--------------+---------+
+```
 
-##########
+
 # Update #
-##########
-
+```mysql
 mysql> UPDATE mytest SET first_name='williaam', last_name='jonathan' WHERE roll_no='B';
 Query OK, 1 row affected (0.00 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
+```
 
-#########
 # Joins #
-#########
-
+```mysql
 mysql> SELECT * FROM mytest INNER JOIN ssn ON mytest.roll_no = ssn.roll_no;
 +---------+------------+--------------+---------+--------+---------+
 | test_id | first_name | last_name    | roll_no | ssn_no | roll_no |
@@ -139,7 +138,9 @@ mysql> SELECT * FROM mytest INNER JOIN ssn ON mytest.roll_no = ssn.roll_no;
 |       3 | sara       | winston      | C       | CCC    | C       |
 |       4 | sara       | winston      | C       | CCC    | C       |
 +---------+------------+--------------+---------+--------+---------+
+```
 
+```mysql
 mysql> SELECT * FROM mytest LEFT JOIN ssn ON mytest.roll_no = ssn.roll_no;
 +---------+------------+--------------+---------+--------+---------+
 | test_id | first_name | last_name    | roll_no | ssn_no | roll_no |
@@ -150,8 +151,9 @@ mysql> SELECT * FROM mytest LEFT JOIN ssn ON mytest.roll_no = ssn.roll_no;
 |       4 | sara       | winston      | C       | CCC    | C       |
 |       5 | sara       | winston      | CE      | NULL   | NULL    |
 +---------+------------+--------------+---------+--------+---------+
+```
 
-
+```mysql
 mysql> SELECT * FROM mytest RIGHT JOIN ssn ON mytest.roll_no = ssn.roll_no;
 +---------+------------+--------------+---------+--------+---------+
 | test_id | first_name | last_name    | roll_no | ssn_no | roll_no |
@@ -162,3 +164,4 @@ mysql> SELECT * FROM mytest RIGHT JOIN ssn ON mytest.roll_no = ssn.roll_no;
 |       4 | sara       | winston      | C       | CCC    | C       |
 |    NULL | NULL       | NULL         | NULL    | DDD    | D       |
 +---------+------------+--------------+---------+--------+---------+
+```
