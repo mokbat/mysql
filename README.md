@@ -4,22 +4,22 @@ Simple explanation of how mysql database works
 
 ### Learn to install mysql ###
 ```
-yum install mysql-server
+vm# yum install mysql-server
 ```
 
 ### Login to mysql ###
 ```
-mysql -u root -p
+vm# mysql -u root -p
 ```
 
 ### Create a db ###
 ```
-CREATE DATABASE test;
+mysql> CREATE DATABASE test;
 ```
 
 ### Use this db ###
 ```
-USE test;
+mysql> USE test;
 ```
 
 
