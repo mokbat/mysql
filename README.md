@@ -35,6 +35,28 @@ CREATE TABLE IF NOT EXISTS mytest (
     );
 ```
 
+### Display column information of  a table ###
+```mysql
+mysql> show columns from ssn;
++---------+------------+------+-----+---------+-------+
+| Field   | Type       | Null | Key | Default | Extra |
++---------+------------+------+-----+---------+-------+
+| ssn_no  | varchar(9) | YES  |     | NULL    |       |
+| roll_no | varchar(5) | NO   | PRI | NULL    |       |
++---------+------------+------+-----+---------+-------+
+````
+
+```mysql
+mysql> show columns from mytest;
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| test_id    | int(5)      | NO   | PRI | NULL    | auto_increment |
+| first_name | varchar(50) | YES  |     | NULL    |                |
+| last_name  | varchar(50) | YES  |     | NULL    |                |
+| roll_no    | varchar(5)  | NO   |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+```
 
 ### Insert Values in a table ###
 ```
