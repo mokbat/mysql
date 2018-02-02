@@ -37,39 +37,35 @@ CREATE TABLE IF NOT EXISTS mytest (
     );
 ```
 
-############################
-# Insert Values in a table #
-############################
 
+# Insert Values in a table #
+```
 INSERT INTO mytest (test_id, first_name, last_name, roll_no) VALUES ('1', 'joanne', 'allenntownne', 'A');
 INSERT INTO mytest (test_id, first_name, last_name, roll_no) VALUES ('2', 'illeana', 'dcruz', 'B');
 INSERT INTO mytest (test_id, first_name, last_name, roll_no) VALUES ('3', 'sara', 'winston', 'C');
 INSERT INTO mytest (test_id, first_name, last_name, roll_no) VALUES ('4', 'sara', 'winston', 'C');
 INSERT INTO mytest (test_id, first_name, last_name, roll_no) VALUES ('5', 'sara', 'winston', 'CE');
+```
 
-##################
 # Create a table #
-##################
-
+```mysql
 CREATE TABLE IF NOT EXISTS ssn (
     ssn_no varchar(9) DEFAULT NULL,
     roll_no varchar(5) NOT NULL,
     PRIMARY KEY(roll_no)
     );
+```
 
-############################
 # Insert Values in a table #
-############################
-
+```mysql
 INSERT INTO ssn (ssn_no, roll_no) VALUES ('AAA', 'A');
 INSERT INTO ssn (ssn_no, roll_no) VALUES ('BBB', 'B');
 INSERT INTO ssn (ssn_no, roll_no) VALUES ('CCC', 'C');
 INSERT INTO ssn (ssn_no, roll_no) VALUES ('DDD', 'D');
+```
 
-###########
 # Display #
-###########
-
+```mysql
 mysql> SELECT * FROM mytest;
 +---------+------------+--------------+---------+
 | test_id | first_name | last_name    | roll_no |
@@ -80,6 +76,8 @@ mysql> SELECT * FROM mytest;
 |       4 | sara       | winston      | C       |
 |       5 | sara       | winston      | CE      |
 +---------+------------+--------------+---------+
+```
+
 
 mysql> SELECT * FROM ssn;
 +--------+---------+
